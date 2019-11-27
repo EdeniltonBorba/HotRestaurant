@@ -1,0 +1,24 @@
+{
+  "name": "hotrestaurant",
+  "version": "1.0.0",
+  "description": "Edenilton and Karan's restaurant",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdeniltonBorba/HotRestaurant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EdeniltonBorba/HotRestaurant/issues"
+  },
+  "homepage": "https://github.com/EdeniltonBorba/HotRestaurant#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node": "^13.1.0"
+  }
+}
