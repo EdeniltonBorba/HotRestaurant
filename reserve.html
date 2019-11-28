@@ -81,3 +81,41 @@
 </body>
 
 </html>
+
+<script type="text/javascript">
+
+$(".submit").on("click", function(event) {
+  event.preventDefault();
+
+// Here we grab the form elements
+  var newReserve = {
+    customerName: $("#reserve-name").val().trim(),
+    customerNumber: $("#reserve-phone").val().trim(),
+    customerEmail: $("#reserve-email").val().trim(),
+    customerID: $("#reserve-unique-id").val().trim()
+  };
+
+  console.log(newReserve);
+
+  $.post("/api/tables", newReserve, function(data) {
+
+    console.log("...");
+    console.log(data);
+
+      if (data.length < 5) {
+        alert("Yay! You are officially booked!");
+      } else {
+        alert ("Sorry you are on the wait list");
+      }
+
+      // Clear the form when submitting
+      $("#reserve-name").val("");
+      $("#reserve-phone").val("");
+      $("#reserve-email").val("");
+      $("#reserve-unique-id").val("");
+    });
+  
+});
+
+
+</script>
